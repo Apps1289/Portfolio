@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" class="h-full">
  <head>
   <meta charset="UTF-8">
@@ -544,30 +544,40 @@ Health chatbots also play a significant role in mental health support. Many chat
        </div>
        <div class="p-6"><span class="text-xs font-medium" style="color: var(--primary-color);">Deep Dive</span>
         <h3 class="font-semibold mt-2 mb-2">Duplicate Pair checker using NLP</h3>
-        <p class="text-sm opacity-70 mb-3">In the age of big data, maintaining clean and accurate datasets is essential for businesses, researchers, and developers. One common challenge is identifying duplicate or near-duplicate text pairs, such as repeated questions, similar product descriptions, or copied content. A Duplicate Pair Checker using Natural Language Processing (NLP) is an intelligent solution designed to detect such similarities efficiently.
+        <div class="blog-content">
+          <p class="text-sm opacity-70 mb-3 blog-preview">In the age of big data, maintaining clean and accurate datasets is essential for businesses, researchers, and developers. One common challenge is identifying duplicate or near-duplicate text pairs...</p>
+          <p class="text-sm opacity-70 mb-3 blog-full" style="display: none;">In the age of big data, maintaining clean and accurate datasets is essential for businesses, researchers, and developers. One common challenge is identifying duplicate or near-duplicate text pairs, such as repeated questions, similar product descriptions, or copied content. A Duplicate Pair Checker using Natural Language Processing (NLP) is an intelligent solution designed to detect such similarities efficiently.
 
 A duplicate pair checker works by analyzing the meaning of text rather than just matching exact words. Traditional methods relied on simple string matching, which often failed when sentences were worded differently but conveyed the same idea. NLP-based systems overcome this limitation by understanding context, semantics, and linguistic patterns. Techniques such as tokenization, stemming, and vectorization convert text into numerical representations, enabling machines to compare meanings rather than just characters.
 
 Modern duplicate detection systems often use advanced models like TF-IDF, cosine similarity, Word2Vec, or transformer-based embeddings (such as BERT). These models measure how closely two sentences or documents are related. For example, the sentences “How can I learn Python quickly?” and “What is the fastest way to study Python?” may appear different, but an NLP-based checker can recognize them 
 as duplicates because of their similar intent. 
           </p>
+        </div>
+        <button class="text-sm font-medium mb-3 blog-toggle-btn" style="color: var(--primary-color); background: none; border: none; cursor: pointer; padding: 0;">View More →</button>
+
         <div class="flex items-center gap-4 text-xs opacity-60"><span>Dec 20, 2023</span> <span>12 min read</span>
         </div>
-       </div></a> <a href="#" class="block rounded-2xl overflow-hidden card-hover" style="background: var(--background-color); border: 1px solid rgba(0,255,159,0.1);">
+       </div></div> <a href="#" class="block rounded-2xl overflow-hidden card-hover" style="background: var(--background-color); border: 1px solid rgba(0,255,159,0.1);">
        <div class="h-40 flex items-center justify-center text-5xl" style="background: linear-gradient(135deg, #ff006e 0%, #fb5607 100%);">
         ⚡
        </div>
        <div class="p-6"><span class="text-xs font-medium" style="color: var(--primary-color);">Career</span>
         <h3 class="font-semibold mt-2 mb-2">Movie Recommendation System</h3>
-        <p class="text-sm opacity-70 mb-3">
+        <div class="blog-content">
+          <p class="text-sm opacity-70 mb-3 blog-preview">In today's digital world, where thousands of movies are released across multiple platforms, choosing what to watch can often feel overwhelming. A Movie Recommendation System is an intelligent solution that helps users discover films...</p>
+          <p class="text-sm opacity-70 mb-3 blog-full" style="display: none;">
           In today’s digital world, where thousands of movies are released across multiple platforms, choosing what to watch can often feel overwhelming. A Movie Recommendation System is an intelligent solution that helps users discover films based on their interests, preferences, and viewing history. These systems are widely used by platforms like Netflix, Amazon Prime, and Disney+, making entertainment more personalized and enjoyable.
 
 A movie recommendation system works by analyzing user data such as previously watched movies, ratings, search history, and even browsing behavior. Based on this information, the system predicts what kind of movies a user might like. There are mainly three types of recommendation techniques: Content-Based Filtering, Collaborative Filtering, and Hybrid Methods. Content-based filtering suggests movies similar to those a user has liked before, while collaborative filtering recommends movies liked by users with similar tastes. Hybrid systems 
 combine both approaches for better accuracy.
           </p>
+        </div>
+        <button class="text-sm font-medium mb-3 blog-toggle-btn" style="color: var(--primary-color); background: none; border: none; cursor: pointer; padding: 0;">View More →</button>
+
         <div class="flex items-center gap-4 text-xs opacity-60"><span>Nov 5, 2023</span> <span>6 min read</span>
         </div>
-       </div></a>
+       </div></div>
      </div>
     </div>
    </section><!-- Contact Section -->
@@ -988,6 +998,25 @@ document.querySelectorAll(".view-certificate-btn").forEach(btn => {
 
     const file = this.getAttribute("data-img");
     openCertificateModal(file);
+  });
+});
+
+/* BLOG POST TOGGLE (View More) */
+document.querySelectorAll(".blog-toggle-btn").forEach(btn => {
+  btn.addEventListener("click", function() {
+    const blogContainer = this.previousElementSibling;
+    const preview = blogContainer.querySelector(".blog-preview");
+    const full = blogContainer.querySelector(".blog-full");
+    
+    if (full.style.display === "none") {
+      preview.style.display = "none";
+      full.style.display = "block";
+      this.textContent = "View Less ↑";
+    } else {
+      preview.style.display = "block";
+      full.style.display = "none";
+      this.textContent = "View More →";
+    }
   });
 });
 </script>
